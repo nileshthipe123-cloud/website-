@@ -11,138 +11,146 @@
 
 <style>
 
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family: Arial, sans-serif;
   background: linear-gradient(180deg,#0f172a,#1e293b);
-  color: white;
+  color:white;
 }
 
 /* HEADER */
 
-.header {
-  text-align: center;
-  padding: 30px 15px 10px;
+.header{
+  text-align:center;
+  padding:30px 15px 10px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 32px;
+.header h1{
+  margin:0;
+  font-size:34px;
   background: linear-gradient(90deg,#ff4ecd,#7a5cff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.tagline {
-  opacity: .8;
-  margin-top: 6px;
+.tagline{
+  opacity:.8;
+  margin-top:6px;
 }
 
-/* BUTTONS */
+/* SECTION TITLES */
 
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 15px 0;
+.title{
+  text-align:center;
+  margin-top:20px;
+  opacity:.85;
+  font-weight:bold;
 }
 
-.btn {
-  padding: 10px 18px;
-  border-radius: 25px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
+/* BUTTON GROUP */
+
+.button-group{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:15px 0;
 }
 
-.pinterest-btn {
-  background: #e60023;
+.btn{
+  padding:10px 18px;
+  border-radius:25px;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
 }
 
-.category-btn {
-  background: linear-gradient(90deg,#ff4ecd,#7a5cff);
+/* Pinterest buttons */
+
+.pinterest-btn{
+  background:#e60023;
+}
+
+/* Category buttons */
+
+.category-btn{
+  background:linear-gradient(90deg,#ff4ecd,#7a5cff);
 }
 
 /* SECTION */
 
-.section {
-  padding: 20px 15px;
+.section{
+  padding:20px 15px;
 }
 
-.section h2 {
-  margin-bottom: 15px;
+.section h2{
+  margin-bottom:15px;
 }
 
-/* PRODUCT GRID */
+/* GRID */
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
 
-.card {
-  background: rgba(255,255,255,0.04);
-  border-radius: 16px;
-  padding: 14px;
-  text-align: center;
-  backdrop-filter: blur(6px);
+.card{
+  background:rgba(255,255,255,0.04);
+  border-radius:16px;
+  padding:14px;
+  text-align:center;
+  backdrop-filter:blur(6px);
 }
 
-/* IMAGE FIX */
+/* CLEAN IMAGE STYLE */
 
-.image-box {
-  background: transparent;
-  padding: 0;
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 10px;
 }
 
-.card img {
-  width: 100%;
-  height: 140px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 8px;
+/* TEXT */
+
+.product-name{
+  font-weight:bold;
+  margin:6px 0;
+  font-size:14px;
 }
 
-/* PRODUCT TEXT */
-
-.product-name {
-  font-weight: bold;
-  margin: 6px 0;
-  font-size: 14px;
+.price{
+  color:#22c55e;
+  font-weight:bold;
+  margin-bottom:8px;
 }
 
-.price {
-  color: #22c55e;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.buy-btn {
-  background: linear-gradient(90deg,#ff4ecd,#7a5cff);
-  border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+.buy-btn{
+  background:linear-gradient(90deg,#ff4ecd,#7a5cff);
+  border:none;
+  padding:8px 18px;
+  border-radius:20px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 /* FOOTER */
 
-.footer {
-  text-align: center;
-  padding: 25px 15px;
-  font-size: 13px;
-  opacity: .7;
+.footer{
+  text-align:center;
+  padding:25px 15px;
+  font-size:13px;
+  opacity:.7;
 }
 
-@media (min-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(3,1fr);
+@media(min-width:600px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
   }
 }
 
@@ -155,14 +163,16 @@ body {
   <div class="tagline">Viral products worth buying ✨</div>
 </div>
 
-<!-- PINTEREST -->
+<div class="title">Follow us on Pinterest</div>
+
 <div class="button-group">
   <a class="btn pinterest-btn" href="https://in.pinterest.com/trendwear_dailyy/" target="_blank">Fashion</a>
   <a class="btn pinterest-btn" href="https://in.pinterest.com/toytok_trends/" target="_blank">Toys</a>
   <a class="btn pinterest-btn" href="https://in.pinterest.com/kitchen_ease/" target="_blank">Kitchen</a>
 </div>
 
-<!-- CATEGORY NAV -->
+<div class="title">Browse Categories</div>
+
 <div class="button-group">
   <a href="#fashion" class="btn category-btn">Fashion</a>
   <a href="#toys" class="btn category-btn">Toys</a>
@@ -175,32 +185,24 @@ body {
   <div class="grid">
 
     <div class="card">
-      <div class="image-box">
-        <img src="images/fashion_one.png">
-      </div>
+      <img src="images/fashion_one.png">
       <div class="product-name">Premium Brown Overshirt</div>
       <div class="price">₹450</div>
-      <a href="https://amzn.to/3MO4gnJ" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://amzn.to/3MO4gnJ" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
     <div class="card">
       <img src="images/fashion_two.png">
       <div class="product-name">Beige Straight Pants</div>
       <div class="price">₹999</div>
-      <a href="https://amzn.to/3OthK8Q" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://amzn.to/3OthK8Q" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
     <div class="card">
       <img src="images/fashion_three.png">
       <div class="product-name">Neutral Sneakers</div>
       <div class="price">₹1,499</div>
-      <a href="https://amzn.to/4cyoL2b" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://amzn.to/4cyoL2b" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
   </div>
@@ -215,18 +217,14 @@ body {
       <img src="images/toy_one.png">
       <div class="product-name">Dancing Robot Toy</div>
       <div class="price">₹799</div>
-      <a href="https://amzn.to/4aD0Xry" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://amzn.to/4aD0Xry" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
     <div class="card">
       <img src="images/toy_two.png">
       <div class="product-name">Shinchan Toy Set</div>
       <div class="price">₹699</div>
-      <a href="https://amzn.to/4kF4om6" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://amzn.to/4kF4om6" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
   </div>
@@ -241,18 +239,14 @@ body {
       <img src="images/kitchen_one.png">
       <div class="product-name">Airtight Glass Storage Jars</div>
       <div class="price">₹650</div>
-      <a href="https://myntr.it/n2cebUG" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://myntr.it/n2cebUG" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
     <div class="card">
       <img src="images/kitchen_two.png">
       <div class="product-name">Metal Storage Cart</div>
       <div class="price">₹2,999</div>
-      <a href="https://amzn.to/4qCKqJQ" target="_blank">
-        <button class="buy-btn">Buy</button>
-      </a>
+      <a href="https://amzn.to/4qCKqJQ" target="_blank"><button class="buy-btn">Buy</button></a>
     </div>
 
   </div>
