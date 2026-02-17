@@ -1,271 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trend Mart</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta name="description" content="Discover trending fashion, toys and kitchen products worth buying.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:white;
-  scroll-behavior:smooth;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg,#0f172a,#1e293b);
+  color: white;
 }
 
 /* HEADER */
-header{
-  text-align:center;
-  padding:40px 20px 25px;
-}
-h1{
-  font-size:32px;
-  background:linear-gradient(90deg,#ec4899,#a855f7);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.tag{
-  color:#cbd5e1;
-  font-size:14px;
-  margin-top:8px;
+
+.header {
+  text-align: center;
+  padding: 30px 15px 10px;
 }
 
-/* FOLLOW */
-.follow{
-  margin-top:22px;
-}
-.follow-title{
-  color:#94a3b8;
-  font-size:14px;
-  margin-bottom:8px;
-}
-.follow button{
-  border:none;
-  padding:10px 18px;
-  margin:6px;
-  border-radius:25px;
-  background:#e11d48;
-  color:white;
-  font-weight:500;
-  cursor:pointer;
-}
-.follow button:hover{
-  background:#be123c;
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  background: linear-gradient(90deg,#ff4ecd,#7a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* CATEGORY NAV */
-.home-nav{
-  margin-top:18px;
-  text-align:center;
-}
-.home-title{
-  color:#94a3b8;
-  font-size:14px;
-  margin-bottom:8px;
-}
-.home-nav button{
-  border:none;
-  padding:10px 18px;
-  margin:6px;
-  border-radius:25px;
-  background:linear-gradient(90deg,#ec4899,#a855f7);
-  color:white;
-  cursor:pointer;
+.tagline {
+  opacity: .8;
+  margin-top: 6px;
 }
 
-/* SECTIONS */
-.section{
-  padding:28px 15px;
-}
-.section h2{
-  margin-bottom:16px;
-  font-size:18px;
+/* BUTTONS */
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-
-  gap:14px;
+.btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
-/* CARD */
-.card{
-  background:rgba(255,255,255,0.05);
-  border-radius:14px;
-  padding:10px;
-  text-align:center;
-  position:relative;
-  transition:0.3s;
-  min-height:210px;
-}
-.card:hover{
-  transform:translateY(-4px);
+.pinterest-btn {
+  background: #e60023;
 }
 
-/* IMAGE CONTROL */
-.card img{
-  width:100%;
-  height:110px;
-  object-fit:contain;
-  background:#0f172a;
-  padding:6px;
-  border-radius:10px;
+.category-btn {
+  background: linear-gradient(90deg,#ff4ecd,#7a5cff);
 }
 
-/* BADGE */
-.badge{
-  position:absolute;
-  top:8px;
-  left:8px;
-  background:#ef4444;
-  padding:2px 7px;
-  font-size:9px;
-  border-radius:10px;
+/* SECTION */
+
+.section {
+  padding: 20px 15px;
 }
 
-.name{
-  font-size:13px;
-  margin-top:8px;
-}
-.price{
-  color:#22c55e;
-  font-weight:600;
-  margin:4px 0;
-  font-size:14px;
+.section h2 {
+  margin-bottom: 15px;
 }
 
-.buy{
-  display:inline-block;
-  background:linear-gradient(90deg,#ec4899,#a855f7);
-  padding:6px 12px;
-  border-radius:20px;
-  text-decoration:none;
-  color:white;
-  font-size:12px;
+/* PRODUCT GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
-footer{
-  text-align:center;
-  padding:25px 15px;
-  font-size:12px;
-  color:#94a3b8;
-  line-height:1.6;
+.card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+  backdrop-filter: blur(6px);
 }
+
+/* IMAGE FIX */
+
+.image-box {
+  background: transparent;
+  padding: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* PRODUCT TEXT */
+
+.product-name {
+  font-weight: bold;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.price {
+  color: #22c55e;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.buy-btn {
+  background: linear-gradient(90deg,#ff4ecd,#7a5cff);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 13px;
+  opacity: .7;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
 </style>
 </head>
-
 <body>
 
-<header>
+<div class="header">
   <h1>Trend Mart</h1>
-  <div class="tag">Viral products worth buying ✨</div>
+  <div class="tagline">Viral products worth buying ✨</div>
+</div>
 
-  <div class="follow">
-    <div class="follow-title">Follow us on Pinterest</div>
-    <button onclick="window.open('https://in.pinterest.com/trendwear_dailyy/')">Fashion</button>
-    <button onclick="window.open('https://in.pinterest.com/toytok_trends/')">Toys</button>
-    <button onclick="window.open('https://in.pinterest.com/kitchen_ease/')">Kitchen</button>
-  </div>
+<!-- PINTEREST -->
+<div class="button-group">
+  <a class="btn pinterest-btn" href="https://in.pinterest.com/trendwear_dailyy/" target="_blank">Fashion</a>
+  <a class="btn pinterest-btn" href="https://in.pinterest.com/toytok_trends/" target="_blank">Toys</a>
+  <a class="btn pinterest-btn" href="https://in.pinterest.com/kitchen_ease/" target="_blank">Kitchen</a>
+</div>
 
-  <div class="home-nav">
-    <div class="home-title">Browse Categories</div>
-    <button onclick="scrollToSection('fashion')">Fashion</button>
-    <button onclick="scrollToSection('toys')">Toys</button>
-    <button onclick="scrollToSection('kitchen')">Kitchen</button>
-  </div>
-</header>
+<!-- CATEGORY NAV -->
+<div class="button-group">
+  <a href="#fashion" class="btn category-btn">Fashion</a>
+  <a href="#toys" class="btn category-btn">Toys</a>
+  <a href="#kitchen" class="btn category-btn">Kitchen</a>
+</div>
 
 <!-- FASHION -->
 <div class="section" id="fashion">
-<h2>👕 Fashion</h2>
-<div class="grid">
+  <h2>👕 Fashion</h2>
+  <div class="grid">
 
-<div class="card">
-<div class="badge">Trending</div>
-<img src="images/fashion_one.png">
-<div class="name">Premium Brown Overshirt</div>
-<div class="price">₹450</div>
-<a class="buy" href="https://amzn.to/3MO4gnJ" target="_blank">Buy</a>
-</div>
+    <div class="card">
+      <div class="image-box">
+        <img src="images/fashion_one.png">
+      </div>
+      <div class="product-name">Premium Brown Overshirt</div>
+      <div class="price">₹450</div>
+      <a href="https://amzn.to/3MO4gnJ" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
 
-<div class="card">
-<img src="images/fashion_two.png">
-<div class="name">Beige Straight Pants</div>
-<div class="price">₹999</div>
-<a class="buy" href="https://amzn.to/3OthK8Q" target="_blank">Buy</a>
-</div>
+    <div class="card">
+      <img src="images/fashion_two.png">
+      <div class="product-name">Beige Straight Pants</div>
+      <div class="price">₹999</div>
+      <a href="https://amzn.to/3OthK8Q" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
 
-<div class="card">
-<img src="images/fashion_three.png">
-<div class="name">Neutral Sneakers</div>
-<div class="price">₹1,499</div>
-<a class="buy" href="https://amzn.to/4cyoL2b" target="_blank">Buy</a>
-</div>
+    <div class="card">
+      <img src="images/fashion_three.png">
+      <div class="product-name">Neutral Sneakers</div>
+      <div class="price">₹1,499</div>
+      <a href="https://amzn.to/4cyoL2b" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
 
-</div>
+  </div>
 </div>
 
 <!-- TOYS -->
 <div class="section" id="toys">
-<h2>🧸 Toys</h2>
-<div class="grid">
+  <h2>🧸 Toys</h2>
+  <div class="grid">
 
-<div class="card">
-<div class="badge">Kids Favorite</div>
-<img src="images/toy_one.png">
-<div class="name">Dancing Robot Toy</div>
-<div class="price">₹579</div>
-<a class="buy" href="https://amzn.to/4aD0Xry" target="_blank">Buy</a>
-</div>
+    <div class="card">
+      <img src="images/toy_one.png">
+      <div class="product-name">Dancing Robot Toy</div>
+      <div class="price">₹799</div>
+      <a href="https://amzn.to/4aD0Xry" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
 
-<div class="card">
-<img src="images/toy_two.png">
-<div class="name">Shinchan Toy Set</div>
-<div class="price">₹199</div>
-<a class="buy" href="https://amzn.to/4kF4om6" target="_blank">Buy</a>
-</div>
+    <div class="card">
+      <img src="images/toy_two.png">
+      <div class="product-name">Shinchan Toy Set</div>
+      <div class="price">₹699</div>
+      <a href="https://amzn.to/4kF4om6" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
 
-</div>
+  </div>
 </div>
 
 <!-- KITCHEN -->
 <div class="section" id="kitchen">
-<h2>🍳 Kitchen Accessories</h2>
-<div class="grid">
+  <h2>🍳 Kitchen</h2>
+  <div class="grid">
 
-<div class="card">
-<img src="images/kitchen_one.png">
-<div class="name">Airtight Glass Storage Jars</div>
-<div class="price">₹699</div>
-<a class="buy" href="https://myntr.it/n2cebUG" target="_blank">Buy</a>
+    <div class="card">
+      <img src="images/kitchen_one.png">
+      <div class="product-name">Airtight Glass Storage Jars</div>
+      <div class="price">₹650</div>
+      <a href="https://myntr.it/n2cebUG" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="images/kitchen_two.png">
+      <div class="product-name">Metal Storage Cart</div>
+      <div class="price">₹2,999</div>
+      <a href="https://amzn.to/4qCKqJQ" target="_blank">
+        <button class="buy-btn">Buy</button>
+      </a>
+    </div>
+
+  </div>
 </div>
 
-<div class="card">
-<img src="images/kitchen_two.png">
-<div class="name">Metal Storage Rack Organizer</div>
-<div class="price">₹2,199</div>
-<a class="buy" href="https://amzn.to/4qCKqJQ" target="_blank">Buy</a>
+<div class="footer">
+  I may earn a commission from purchases made through links on this site, at no extra cost to you.
 </div>
-
-</div>
-</div>
-
-<footer>
-This site contains affiliate links. I may earn a commission — without increasing the price for you.
-</footer>
-
-<script>
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
-</script>
 
 </body>
 </html>
